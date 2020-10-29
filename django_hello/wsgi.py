@@ -12,8 +12,8 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 if os.environ.get('DJANGO_ENV') == 'production':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'azuresite.production')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_hello.production')
 else:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'azuresite.settings')   
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_hello.settings')   
 
 application = get_wsgi_application()
