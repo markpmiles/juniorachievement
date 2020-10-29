@@ -4,7 +4,7 @@ import sys
 
 if __name__ == '__main__':
     if os.environ.get('DJANGO_ENV') == 'production':
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'azuresite.production')
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_hello.production')
     else:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_hello.settings')
     
