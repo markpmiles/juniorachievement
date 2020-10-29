@@ -75,6 +75,7 @@ WSGI_APPLICATION = 'django_hello.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 # Configure Postgres database; the full username is username@servername,
 # which we construct using the DBHOST value.
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -83,7 +84,7 @@ DATABASES = {
         'USER': os.environ['DBUSER'] + "@" + hostname,
         'PASSWORD': os.environ['DBPASS'] 
     }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
