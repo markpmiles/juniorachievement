@@ -1,3 +1,8 @@
+## Getting Started 
+- Set up Virtual Environment
+- Seed database: `python manage.py loaddata schools.json`
+- Start Development Env: `python manage.py runserver`
+
 ---
 services: app-service\web,app-service
 platforms: python
