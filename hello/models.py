@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Preassessment(models.Model):
     last_name = models.CharField(max_length=3)
     birth_date = models.DateField()
@@ -72,7 +74,8 @@ class Preassessment(models.Model):
     q31_score = models.IntegerField()
     q32_answer = models.CharField(max_length=200)
     q32_score = models.IntegerField()
-    
+
+
 class Postassessment(models.Model):
     last_name = models.CharField(max_length=3)
     birth_date = models.DateField()
@@ -150,4 +153,3 @@ class Postassessment(models.Model):
     q34_score = models.IntegerField()
     q35_answer = models.CharField(max_length=200)
     q35_score = models.IntegerField()
-    
