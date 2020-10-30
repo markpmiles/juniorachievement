@@ -71,7 +71,7 @@ class Preassessment(models.Model):
     q32_answer = models.CharField(max_length=200)
     q32_score = models.IntegerField()
     
-class Preassessment(models.Model):
+class Postassessment(models.Model):
     last_name = models.CharField(max_length=3)
     birth_date = models.DateField()
     class_grade = models.CharField(max_length=50)
