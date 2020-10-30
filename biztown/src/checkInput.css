@@ -1,0 +1,58 @@
+.table-border {
+	border: 1px solid black;
+}
+.table-border-top {
+	border-top: 1px solid black;
+}
+.table-border-bottom {
+	border-bottom: 1px solid black;
+}
+.table-border-right {
+	border-right: 1px solid black;
+}
+.table-border-left {
+	border-left: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+  width: 730px;
+}
+
+.deposit-form-small-text {
+	font-size: 11px;
+	padding-bottom: 10px;
+}
+
+.deposit-form {
+	font-size: 15px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.dollar-amount {
+	text-align: right;
+	width: 100px;
+}
+
+.no-border {
+	border: none;
+}
+
+.narrow-column {
+	width: 20px;
+}
+
+.medium-column {
+	width: 100px;
+}
+
+.bank-slip-container {
+	overflow-x: scroll;
+}
+
+.slip-top {
+	padding-top: 50px;
+}
+
+.grey-background {
+	background: #D4D4D4;
+}
