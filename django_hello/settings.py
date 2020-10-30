@@ -97,6 +97,14 @@ WSGI_APPLICATION = 'django_hello.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 # Configure Postgres database; the full username is username@servername,
 # which we construct using the DBHOST value.
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
 """
 DATABASES = {
     'default': {
@@ -111,7 +119,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'AppDb',
+        'NAME': 'db.sqlite3',
     }
 }
 

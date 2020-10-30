@@ -1,8 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
-
 class Schools(models.Model):
     school_name = models.CharField(max_length=255)
     district = models.CharField(max_length=255)
@@ -13,7 +10,7 @@ class Preassessment(models.Model):
     birth_date = models.DateField()
     class_grade = models.CharField(max_length=50)
     teacher = models.CharField(max_length=200, default='None')
-    school = models.CharField(max_length=200, default='None')
+    school = models.ForeignKey(Schools, on_delete=models.DO_NOTHING)
     previous_participation = models.CharField(max_length=50)
     q01_answer = models.CharField(max_length=200)
     q01_score = models.IntegerField()
@@ -86,7 +83,7 @@ class Postassessment(models.Model):
     birth_date = models.DateField()
     class_grade = models.CharField(max_length=50)
     teacher = models.CharField(max_length=200, default='None')
-    school = models.CharField(max_length=200, default='None')
+    school = models.ForeignKey(Schools, on_delete=models.DO_NOTHING)
     previous_participation = models.CharField(max_length=50)
     q01_answer = models.CharField(max_length=200)
     q01_score = models.IntegerField()
