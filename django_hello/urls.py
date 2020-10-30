@@ -15,9 +15,18 @@ Including another URLconf
 """
 #from django.contrib import admin
 from django.urls import path, include
-
+from hello.models import Preassessment, Postassessment
+from rest_framework import routers
+from hello.views import PreAssessmentViewset
+from hello.views import PostAssessmentViewset
 #path('admin/', admin.site.urls),
 
-urlpatterns = [    
-    path('', include('hello.urls')),
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'preassessment', PreAssessmentViewset, 'preassessment')
+router.register(r'postassessment', PostAssessmentViewset, 'postassessment')
+
+
+urlpatterns = [
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls')),
 ]
