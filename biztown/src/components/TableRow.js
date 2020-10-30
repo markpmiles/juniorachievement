@@ -1,14 +1,7 @@
 import React from "react"
 import {Label, Input} from 'reactstrap';
 
-const TableRow = (props) => {
-  const input1 = useRef()
-  const input2 = useRef()
-  const input3 = useRef()
-  const input4 = useRef()
-
-  
-
+const TableRow = (props) => {  
   return(
     <tr>
       {props.aboutMe ? 
@@ -17,17 +10,32 @@ const TableRow = (props) => {
           <td>{props.prompt}</td>
           <td>
             <Label check>
-              <Input type="radio" ref={input1} name={`radio${props.idx}`} value="Not Likely" required></Input>
+              <Input
+              innerRef={props.inputs[props.idx]}
+              type="radio" name={`radio${props.idx}`} 
+              alue={1} 
+              required>
+              </Input>
             </Label>
           </td>
           <td>
             <Label check>
-              <Input type="radio" ref={input2} name={`radio${props.idx}`} value="Somewhat Likely" required></Input>
+              <Input
+              innerRef={props.inputs[props.idx]}
+              type="radio" name={`radio${props.idx}`}
+              value={2}
+              required>
+              </Input>
             </Label>
           </td>
           <td>
             <Label check>
-              <Input type="radio" ref={input3} name={`radio${props.idx}`} value="Very Likely" required></Input>
+              <Input
+              innerRef={props.inputs[props.idx]}
+              type="radio" name={`radio${props.idx}`}
+              value={3}
+              required>
+              </Input>
             </Label>
           </td>
         </>
@@ -38,22 +46,45 @@ const TableRow = (props) => {
         <td>{props.prompt}</td>
           <td>
             <Label check>
-              <Input type="radio" ref={input1} name={`radio${props.idx}`} value={1} required></Input>
+              <Input
+              innerRef={props.inputs[props.idx]}
+              type="radio" name={`radio${props.idx}`}
+              value={1}
+              required>
+              </Input>
             </Label>
           </td>
           <td>
             <Label check>
-              <Input type="radio" ref={input2} name={`radio${props.idx}`} value={2} required></Input>
+              <Input
+              innerRef={props.inputs[props.idx]}
+              type="radio"
+              name={`radio${props.idx}`}
+              value={2}
+              required>
+              </Input>
             </Label>
           </td>
           <td>
             <Label check>
-              <Input type="radio" ref={input3} name={`radio${props.idx}`} value={3} required></Input>
+              <Input
+              innerRef={props.inputs[props.idx]}
+              type="radio"
+              name={`radio${props.idx}`}
+              value={3}
+              required>
+              </Input>
             </Label>
           </td>
           <td>
             <Label check>
-              <Input type="radio" ref={input4} name={`radio${props.idx}`} value={4} required></Input>
+              <Input
+              innerRef={props.inputs[props.idx]}
+              type="radio"
+              name={`radio${props.idx}`}
+              value={4}
+              required>
+              </Input>
             </Label>
         </td>      
       </>
