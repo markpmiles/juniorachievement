@@ -12,3 +12,12 @@ class SchoolsViewSet(viewsets.ModelViewSet):
     queryset = Schools.objects.all()
     serializer_class = SchoolsSerializer
     # permission_classes = [permissions.IsAuthenticated]
+
+
+class PreAssessmentViewset(viewsets.ModelViewSet):
+    queryset = Preassessment.objects.all()
+    serializer_class = PreAssessmentSerializer
+
+class PostAssessmentViewset(viewsets.ModelViewSet):
+    queryset = Postassessment.objects.all()
+    serializer_class = PostAssessmentSerializer
