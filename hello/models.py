@@ -3,6 +3,11 @@ from django.db import models
 # Create your models here.
 
 
+class Schools(models.Model):
+    school_name = models.CharField(max_length=255)
+    district = models.CharField(max_length=255)
+
+
 class Preassessment(models.Model):
     last_name = models.CharField(max_length=3)
     birth_date = models.DateField()
