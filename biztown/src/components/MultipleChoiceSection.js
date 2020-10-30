@@ -52,7 +52,7 @@ class MultipleChoiceSection extends Component {
                 question: "Which one of the following statements is TRUE?",
                 possibleAnswers: [
                     "You can continue to write checks as long as you have checks in your checkbook.",
-                    "All bank transactions should be recorded in the bank register.",
+                    "All checking account transactions should be recorded in the transaction register.",
                     "A direct deposit is when you take your paycheck directly to the bank after you receive it.",
                     "Credit cards and debit cards are the same thing."
                 ]
@@ -126,11 +126,12 @@ class MultipleChoiceSection extends Component {
         });
         return (
             <div>
+                <h3>Program Content Questions</h3>
                     <div><b>Even though you haven’t actually participated in this program yet, please try to answer these questions.</b></div>
                     <div><i>Select the response that you think best answers the question.</i></div>
-            <ol>
-                { multipleChoiceComponent}
-            </ol>
+                <ol>
+                    { multipleChoiceComponent}
+                </ol>
             </div>
         );
     }

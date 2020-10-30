@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import bizTownBank from "./../BizTownBank.png"
+
 import '../App.css';
 import '../checkInput.css';
 
@@ -22,7 +24,7 @@ class DepositForm extends Component {
                             <td className="table-border-right"></td>
                         </tr>
                         <tr>
-                            <td className="table-border-left"></td>
+                            <td className="table-border-left" style={{width: "10px"}}></td>
                             <td className="flex-container">
                                 <span><b>Name</b></span>
                                 <span
@@ -35,11 +37,17 @@ class DepositForm extends Component {
                             <td className="table-border">COIN</td>
                             <td className="table-border"><input className="no-border dollar-amount" type="text" /></td>
                             <td className="table-border">.<input className="no-border narrow-column center-align" type="text" /></td>
-                            <td className="table-border-right"></td>
+                            <td className="table-border-right" style={{width: "10px"}}></td>
                         </tr>
                         <tr>
                             <td className="table-border-left"></td>
-                            <td rowSpan="2">"Bank" Image</td>
+                            <td rowSpan="3">
+                                <img 
+                                    src={ bizTownBank }
+                                    alt="BizTown Bank Logo"
+                                    style={{width:"300px", marginBottom: "10px", marginTop: "5px"}}
+                                />
+                            </td>
                             <td className="table-border" colSpan="2">LIST CHECKS SINGLY</td>
                             <td className="table-border dollar-amount">62</td>
                             <td className="table-border center-align">.00</td>
@@ -103,7 +111,7 @@ class DepositForm extends Component {
                         </tr>
                         <tr className="table-border-right">
                             <td className="table-border-left"></td>
-                            <td>Sig Image</td>
+                            <td><span style={{fontFamily: "cursive"}}>Mark Hill</span></td>
                             <td className="flex-container" colSpan="5">
                                 <span>Acct. #</span>
                                 <span

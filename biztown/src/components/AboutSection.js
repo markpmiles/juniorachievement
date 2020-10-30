@@ -3,6 +3,8 @@ import React, { Component } from "react";
 class AboutSection extends Component {
   	render () {
 	  	return (
+	  		<div>
+	  		<h3>Tell Us About You</h3>
 	  		<ol>
 			    <li className="form-group">
 			    	<div className="flex-column-container">
@@ -54,6 +56,7 @@ class AboutSection extends Component {
 			       	</div>
 		       	</li>
 		    </ol>
+		    </div>
 	    );
   	}
 }

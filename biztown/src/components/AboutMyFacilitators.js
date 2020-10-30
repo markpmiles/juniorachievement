@@ -24,7 +24,7 @@ const AboutMyFacilitators = () => {
     })
   }
 
-  const prompts = ["My instructor made a connection between real life and what I learned in the classroom.", "My instructor/volunteer helped me to realize the importance of staying in school.", "My volunteer’s personal stories motivated me."]
+  const prompts = ["My instructor/volunteer made a connection between real life and what I learned in the classroom.", "My instructor/volunteer helped me to realize the importance of staying in school.", "My instructor/volunteer’s personal stories motivated me."]
 
   return (
     <>
@@ -45,7 +45,6 @@ const AboutMyFacilitators = () => {
           ))}
         </tbody>
       </Table>
-      <Button onClick={handleQuestions33To35}>Submit</Button>
     </>
   )
 

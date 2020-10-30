@@ -47,10 +47,13 @@ table {
 
 .bank-slip-container {
 	overflow-x: scroll;
+	margin-bottom: 60px;
 }
 
 .slip-top {
 	padding-top: 50px;
+	margin-bottom: 60px;
+	overflow-x: scroll;
 }
 
 .grey-background {

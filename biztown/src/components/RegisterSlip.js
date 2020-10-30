@@ -57,7 +57,7 @@ class RegisterSlip extends Component {
                         </tr>
                         <tr>
                             <td className="table-border"><input className="no-border register-medium-col" type="text" /></td>
-                            <td className="table-border"><input className="no-border register-medium-col" type="text" /></td>
+                            <td className="table-border register-medium-col">3/14</td>
                             <td className="table-border"><input className="no-border" type="text" /></td>
                             <td className="table-border"><input className="no-border register-medium-col" type="text" /></td>
                             <td className="table-border"><input className="no-border narrow-column" type="text" /></td>

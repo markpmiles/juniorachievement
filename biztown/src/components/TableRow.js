@@ -11,9 +11,9 @@ const TableRow = (props) => {
           <td>
             <Label check>
               <Input
-              innerRef={props.inputs[props.idx]}
+              ref={props.inputs[props.idx]}
               type="radio" name={`radio${props.idx}`} 
-              alue={1} 
+              value={1} 
               required>
               </Input>
             </Label>

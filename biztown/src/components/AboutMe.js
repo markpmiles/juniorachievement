@@ -3,7 +3,8 @@ import TableRow from "./TableRow"
 import DataManager from "../modules/DataManager";
 import { Table, Button } from 'reactstrap';
 
-const AboutMe = () => {
+
+const AboutMe = (props) => {
   const input1 = useRef()
   const input2 = useRef()
   const input3 = useRef()
@@ -12,6 +13,8 @@ const AboutMe = () => {
 
   const handleQuestions23To25 = (e) => {
     e.preventDefault();
+    console.log("e",e);
+    console.log("this",this);
 
     const questions23To25 = {
       q23_score: input1.current.value,
@@ -19,13 +22,12 @@ const AboutMe = () => {
       q25_score: input3.current.value
     }
 
-    DataManager.post("pretest", questions23To25).then(() => {
-      <Redirect to="/aboutmyfuture" />
-    })
+    props.handleChange(questions23To25)
   }
 
   const prompts = ["I plan to start using a personal budget.", "I intend to start saving money for the future.", "I will think more about financial issues in my future."]
-
+  console.log("this",this);
+  var test = false;
   return(
     <>
       <Table bordered>
@@ -40,12 +42,12 @@ const AboutMe = () => {
         </thead>
         <tbody>
           {prompts.map((prompt, idx) => (
-            <TableRow inputs={inputs} prompt={prompt} idx={idx} aboutMe={true} />
+            <TableRow inputs={inputs} prompt={prompt} idx={idx + 5} aboutMe={true} />
           ))
           }
         </tbody>
       </Table>
-      <Button onClick={handleQuestions23To25}>Next</Button>
+      { test && <Button onClick={handleQuestions23To25}>Next</Button> }
     </>
   )
 }

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import bizTownBank from "./../BizTownBank.png"
+
 import '../App.css';
 import '../checkInput.css';
 
@@ -100,9 +102,14 @@ class CheckSlip extends Component {
                         </tr>
                         <tr>
                             <td
+                                style={{textAlign: "left"}}
                                 className="table-border-left table-border-right"
                             >
-                                "Bank" Icon
+                                <img 
+                                    src={ bizTownBank }
+                                    alt="BizTown Bank Logo"
+                                    style={{width:"300px", marginBottom: "10px", marginTop: "5px"}}
+                                />
                             </td>
                         </tr>
                         <tr>
@@ -114,14 +121,14 @@ class CheckSlip extends Component {
                                         Memo
                                     </div>
                                     <div
-                                        className="table-border-bottom"
+                                        className="table-border-bottom flex-item-grow"
                                         style={{margin: "0 15px", padding: "0 80px"}}
                                     >
                                         gift
                                     </div>
                                     <div>
                                         <input
-                                            style={{border: "solid black", borderWidth: "0 0 1px 0", width: "200px"}}
+                                            style={{border: "solid black", borderWidth: "0 0 1px 0", width: "300px", marginRight: "15px", marginLeft: "30px"}}
                                             type="text"
                                         />
                                     </div>

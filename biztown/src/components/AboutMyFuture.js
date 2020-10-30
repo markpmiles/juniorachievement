@@ -54,7 +54,6 @@ const AboutMyFuture = () => {
           ))}
         </tbody>
       </Table>
-      <Button onClick={handleQuestions26To32}>Submit</Button>
     </>
   )
 }

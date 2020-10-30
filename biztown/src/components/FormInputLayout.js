@@ -7,6 +7,7 @@ import DataManager from "../modules/DataManager";
 import AboutMe from "./AboutMe"
 import AboutMyFuture from "./AboutMyFuture"
 import AboutMyFacilitators from "./AboutMyFacilitators"
+import headerLogo from "./../JAInspiringHeader.png"
 
 class FormInputLayout extends Component {
     constructor(props) {
@@ -15,8 +16,6 @@ class FormInputLayout extends Component {
             currentStep: 1,
             aboutData: {},
             multipleChoiceData: {},
-            email:  '',
-            username: '',
             password: '', 
             pageTitle: [
                 'Tell Us About You',
@@ -49,6 +48,10 @@ class FormInputLayout extends Component {
             multipleChoiceData[name] = value;
             return { multipleChoiceData };
         })    
+    }
+
+    handleBehaviouralAboutMeChange = event => {
+        console.log("handleBehaviouralAboutMeChange", event)
     }
      
     handleSubmit = event => {
@@ -119,11 +122,15 @@ class FormInputLayout extends Component {
     render() {
         var currentStep = this.state.currentStep;
         return (
-            <div className="form-input">
+            <div className="form-input" style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
                 <Fragment>
-                <p className="form-header">{this.state.pageTitle[this.state.currentStep - 1]} </p> 
+                 <img src={ headerLogo } alt="Girl in a jacket" width="100%" />
+                 <h2 style={{ textAlign: "center", background: "#d59844", padding: "20px", marginTop: "0" }}>JA BizTown Post Program Survey</h2>
 
-                <form className="form-body" onSubmit={this.handleSubmit}>
+                <form
+                    className="form-body" onSubmit={this.handleSubmit}
+                    style={{ paddingTop: "10px" }}
+                >
                     {(currentStep === 1) && 
                         <AboutSection
                             handleChange={this.handleAboutSectionChange}
@@ -138,13 +145,14 @@ class FormInputLayout extends Component {
                     }
                     {(currentStep === 3) && 
                         <DepositFormSection
-                            currentStep={this.state.currentStep} 
                             handleChange={this.handleChange}
                             password={this.state.password}
                         />
                     }
                     {(currentStep === 4) && 
-                        <AboutMe />
+                        <AboutMe
+                            handleChange={this.handleBehaviouralAboutMeChange}
+                        />
                     }
                     {(currentStep === 5) && 
                         <AboutMyFuture />
