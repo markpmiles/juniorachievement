@@ -1,27 +1,20 @@
 ---
-page_type: sample
-description: "A minimal sample app that can be used to demonstrate deploying Django apps to Azure App Service on Linux."
-languages:
-- python
-products:
-- azure
-- azure-app-service
+services: app-service\web,app-service
+platforms: python
+author: cephalin
 ---
 
-# Python Django sample for Azure App Service (Linux)
+# Django and PostgreSQL sample for Azure App Service
 
-This is a minimal Django app, without a database, that can be deployed to Azure App Service on Linux.
+This is a sample application that you can use to follow along with the tutorial at 
+[Build a Python and PostgreSQL web app in Azure App Service](https://docs.microsoft.com/azure/app-service/containers/tutorial-python-postgresql-app). 
 
-For instructions on running and deploying the code, see [Quickstart: Create a Python app in Azure App Service on Linux](https://docs.microsoft.com/azure/app-service/quickstart-python).
+The sample is a simple Python Django application that connects to a PostgreSQL database.
 
-## Changes to Django settings
+The database connection information is specified via environment variables `DBHOST`, `DBPASS`, `DBUSER`, and `DBNAME`. This app always uses the default PostgreSQL port.
 
-This sample contains two modifications in the file *django_hello/settings.py*:
+**BREAKING CHANGE Oct 12 2020**: The `DBHOST` environment variable is expected to contain *only* the server name, not the full URL, which is constructed at run time (see azuresite/production.py). Similarly, `DBUSER` is expected to contain only the user name, not username@servername as before, because using the simpler `DBHOST` the code can also construct the correct login form at run time (again in azuresite/production.py), avoiding failures that arise when `DBUSER` lacks the @servername portion.  
 
-- `ALLOWED_HOSTS` is set to include the value of the `WEBSITE_HOSTNAME` environment variable, if present. Azure App Service automatically sets this environment variable upon deployment to the app's URL.
-
-- The `DATABASES` object is commented out (using """) so that the app doesn't attempt to use a database at all. To use a database, remove the comments and modify the values as appropriate for your database.
-
-## Contributing
+# Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

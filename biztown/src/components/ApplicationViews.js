@@ -1,29 +1,27 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import AboutMe from "./AboutMe"
-import AboutMyFuture from "./AboutMyFuture"
-import AboutMyFacilitators from "./AboutMyFacilitators"
+import  { FormInputLayout } from "./FormInputLayout.js"
 
 const ApplicationViews = () => {
 
   return(
     <>
       <Route
-        path="/aboutme"
+        path="/pretest/"
         render={()=> (
-          <AboutMe />
+          <FormInputLayout />
         )}
       />
       <Route
-        path="/aboutmyfuture"
+        path="/posttest"
         render={()=> (
-          <AboutMyFuture />
+          <FormInputLayout />
         )}
       />
       <Route
-        path="/aboutmyfacilitators"
+        path="/completionPage"
         render={()=> (
-          <AboutMyFacilitators />
+          <div>Complete!!</div>
         )}
       />
     </>
