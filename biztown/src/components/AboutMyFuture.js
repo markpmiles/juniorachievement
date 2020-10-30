@@ -14,7 +14,7 @@ const AboutMyFuture = () => {
 
   const inputs = [input1, input2, input3, input4, input5, input6, input7]
 
-  const handleQuestions26Through32 = (e) => {
+  const handleQuestions26To32 = (e) => {
     e.preventDefault();
 
     const questions26To32 = {
@@ -28,7 +28,7 @@ const AboutMyFuture = () => {
     }
 
     DataManager.post("pretest", questions26To32).then(() => {
-      <Redirect to="/" />
+      <Redirect to="/aboutme" />
     })
 
   }
@@ -54,7 +54,7 @@ const AboutMyFuture = () => {
           ))}
         </tbody>
       </Table>
-      <Button onClick={handleQuestions26Through32}>Submit</Button>
+      <Button onClick={handleQuestions26To32}>Submit</Button>
     </>
   )
 }
