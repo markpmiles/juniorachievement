@@ -10,4 +10,6 @@
       "database": "db.sqlite3"
     }
   ]
+=======
+  "python.pythonPath": ".venv/bin/python"
 }
